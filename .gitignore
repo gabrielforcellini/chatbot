@@ -1,0 +1,15 @@
+# dotenv
+.env
+.env.*
+
+# Node.js
+node_modules/
+dist/
+
+# Logs
+logs/
+*.log
+
+# Dependências
+package-lock.json
+yarn.lock
