@@ -1,6 +1,7 @@
 const express = require("express");
 const { WebhookClient } = require("dialogflow-fulfillment");
 const axios = require('axios');
+const cors = require("cors");
 require("dotenv").config();
 
 const textGeneration = async (prompt) => {
@@ -39,6 +40,13 @@ webApp.use(express.json());
 webApp.use((req, res, next) => {
   console.log(`Path ${req.path} with Method ${req.method}`);
   next();
+});
+
+webApp.use(cors({ origin: process.env.CORS_ORIGIN || '*' }));
+webApp.use(express.static(__dirname));
+
+webApp.get("/chat", (req, res) => {
+  res.sendFile(__dirname + '/index.html');
 });
 
 webApp.get("/", (req, res) => {
