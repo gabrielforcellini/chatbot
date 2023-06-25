@@ -4,14 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <title>Chatbot</title>
 </head>
 
 <body>
-  <h1>CHATBOT</h1>
+  <div class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Produtos</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <a href="#" class="logo">Comércio XYZ</a>
+  </div>
+  <section class="hero-image">
+    <div class="hero-text">
+      <h2>As melhores ofertas esperam por você!</h2>
+      <p>Encontre os produtos que você precisa com preços incríveis.</p>
+      <a href="#" class="cta-button">Veja nossas promoções</a>
+    </div>
+  </section>
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Sobre nós</h2>
+      <p>O Comércio XYZ é uma loja especializada em fornecer produtos de alta qualidade para nossos clientes. Temos uma
+        ampla variedade de produtos, desde eletrônicos até roupas e acessórios. Nossa missão é oferecer excelência no
+        atendimento e garantir a satisfação de cada cliente.</p>
+    </div>
+  </section>
+  <section class="contact-section">
+    <div class="contact-info">
+      <div>
+        <h2>Contato</h2>
+        <p>Telefone: (123) 456-7890</p>
+        <p>Email: info@comercioxyz.com</p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 Comércio XYZ. Todos os direitos reservados.</p>
+  </footer>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+  <df-messenger df-cx="true" location="us-central1" chat-title="Gabriel" agent-id="5df9b55b-3b3d-4ab1-8be6-a7022f95bba6"
+    language-code="pt-br"></df-messenger>
+
 </body>
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
-<df-messenger df-cx="true" location="us-central1" chat-title="Gabriel" agent-id="5df9b55b-3b3d-4ab1-8be6-a7022f95bba6"
-  language-code="pt-br"></df-messenger>
 
 </html>
